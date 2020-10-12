@@ -152,7 +152,7 @@ namespace FunctionsExamples
         *  Install System.Data.SQLClient via NuGet
         *
         */
-        [FunctionName("GET_noParams_withDB")]
+        [FunctionName("GET_Params_withDB")]
         public static async Task<IActionResult> Get_Params_withDB(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "getroute/bezoekers/{day}")] HttpRequest req,
             string day,
