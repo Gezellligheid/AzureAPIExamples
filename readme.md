@@ -59,10 +59,12 @@ Created by Debaveye Elias
 
 	3.1 **MQTT Without Azure Functions** `MQTTNoFunctions.cs`
 		
-	Example on how you would implement MQTT in a C# project<br />
-	Covers **sending** and **receiving** messages
+	* `Example on adding MQTT
 
-	Note: Don't forget to add the M2MQTT NuGet package [Package](https://www.nuget.org/packages/M2Mqtt/4.3.0?_src=template)
+		Example on how you would implement MQTT in a C# project<br />
+		Covers **sending** and **receiving** messages
+
+		Note: Don't forget to add the M2MQTT NuGet package [Package](https://www.nuget.org/packages/M2Mqtt/4.3.0?_src=template)
 
 
 	3.2 **MQTT With Azure Functions** `MQTTFunctions.cs`
