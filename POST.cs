@@ -30,7 +30,7 @@ namespace FunctionsExamples
          *  Post without a Database
          *
          */
-        [FunctionName("POST")]
+        [FunctionName("POST_noDB")]
         public static async Task<IActionResult> POST_noDB(
             [HttpTrigger(AuthorizationLevel.Anonymous,  "post", Route = "postroute")] HttpRequest req,
             ILogger log)
@@ -53,7 +53,7 @@ namespace FunctionsExamples
          *  Post with a Database
          *
          */
-        [FunctionName("POST")]
+        [FunctionName("POSTWithDB")]
         public static async Task<IActionResult> Post_DB(
             [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "postroute")] HttpRequest req,
             ILogger log)
