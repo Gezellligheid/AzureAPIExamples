@@ -31,6 +31,7 @@ Created by Debaveye Elias
 
 		GET with parameters with database
 		Route can be changed however you want
+
 		
 		**Note:**
 		Don't forget to add your ConnectionString to local.settings.json and include it in the code. (see comments)
