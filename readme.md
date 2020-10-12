@@ -59,12 +59,13 @@ Created by Debaveye Elias
 
 	3.1 **MQTT Without Azure Functions** `MQTTNoFunctions.cs`
 		
-	* `Example on adding MQTT
+	* `Example on adding MQTT`
 
 		Example on how you would implement MQTT in a C# project<br />
 		Covers **sending** and **receiving** messages
 
-		Note: Don't forget to add the M2MQTT NuGet package [Package](https://www.nuget.org/packages/M2Mqtt/4.3.0?_src=template)
+		Note: Don't forget to add the M2MQTT NuGet package<br />
+		[Package](https://www.nuget.org/packages/M2Mqtt/4.3.0?_src=template)
 
 
 	3.2 **MQTT With Azure Functions** `MQTTFunctions.cs`
@@ -76,7 +77,8 @@ Created by Debaveye Elias
 
 		The data can be used for all sorts of end results (Database, ...)(see variablenames)
 
-		Note: Don't forget to add the CaseOnline.Azure.WebJobs.Extensions.Mqtt package [package](https://www.nuget.org/packages/CaseOnline.Azure.WebJobs.Extensions.Mqtt/2.1.0?_src=template)
+		Note: Don't forget to add the CaseOnline.Azure.WebJobs.Extensions.Mqtt package<br />
+		[package](https://www.nuget.org/packages/CaseOnline.Azure.WebJobs.Extensions.Mqtt/2.1.0?_src=template)
 
 
 	* `FunctionName("MQTTFunctionsWithoutResend")`
@@ -86,4 +88,5 @@ Created by Debaveye Elias
 
 			The data can be used for all sorts of end results (Database, ...)(see variablenames)
 
-			Note: Don't forget to add the CaseOnline.Azure.WebJobs.Extensions.Mqtt package [package](https://www.nuget.org/packages/CaseOnline.Azure.WebJobs.Extensions.Mqtt/2.1.0?_src=template)
+			Note: Don't forget to add the CaseOnline.Azure.WebJobs.Extensions.Mqtt package<br />
+			[package](https://www.nuget.org/packages/CaseOnline.Azure.WebJobs.Extensions.Mqtt/2.1.0?_src=template)
