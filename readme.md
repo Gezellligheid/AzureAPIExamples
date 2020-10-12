@@ -83,10 +83,10 @@ Created by Debaveye Elias
 
 	* `FunctionName("MQTTFunctionsWithoutResend")`
 
-			MQTT function that will execute included code when message is received at broker to specific topic<br/>
-			This function will **not** send his own message towards the broker
+		MQTT function that will execute included code when message is received at broker to specific topic<br/>
+		This function will **not** send his own message towards the broker
 
-			The data can be used for all sorts of end results (Database, ...)(see variablenames)
+		The data can be used for all sorts of end results (Database, ...)(see variablenames)
 
-			Note: Don't forget to add the CaseOnline.Azure.WebJobs.Extensions.Mqtt package<br />
-			[package](https://www.nuget.org/packages/CaseOnline.Azure.WebJobs.Extensions.Mqtt/2.1.0?_src=template)
+		Note: Don't forget to add the CaseOnline.Azure.WebJobs.Extensions.Mqtt package<br />
+		[package](https://www.nuget.org/packages/CaseOnline.Azure.WebJobs.Extensions.Mqtt/2.1.0?_src=template)
