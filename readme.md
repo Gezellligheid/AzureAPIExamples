@@ -92,9 +92,11 @@ Created by Debaveye Elias
 		[package](https://www.nuget.org/packages/CaseOnline.Azure.WebJobs.Extensions.Mqtt/2.1.0?_src=template)
 
 
-4. **Table Storage**
+4. **Azure Storage**
 	
 	4.1 **Table Storage** `Storage/CloudTables.cs`
+
+	Both Functions need a TableEntity class to send data to the cloud storage
 
 	* `FunctionName("POSTWithAzureStorage")`
 
@@ -116,3 +118,16 @@ Created by Debaveye Elias
 		Don't forget to write your Tablename correctly<br />
 		Don't forget to add the Microsoft.Azure.Cosmos.Table package<br />
 		[package](https://www.nuget.org/packages/Microsoft.Azure.Cosmos.Table/1.0.8?_src=template)
+
+
+	4.2 **Queues** `Queues/Queues.cs`
+
+	* `FunctionName("Queues")`
+
+		Function will be triggered when data enters a queue<br/>
+		Includes function to add a certain instance to the queue
+
+		**Note:** Don't forget to add the ConnectionString to local.settings.json<br/>
+		Don't forget to add the Azure.Storage.Queues package<br/>
+		[package](https://www.nuget.org/packages/Azure.Storage.Queues/12.4.2?_src=template)
+		
