@@ -96,6 +96,8 @@ Created by Debaveye Elias
 	
 	4.1 **Table Storage** `Storage/CloudTables.cs`
 
+	* `FunctionName("POSTWithAzureStorage")`
+
 		Azure POST function that will create an instance of ExampleRequest and put this in a Table storage.<br />
 		This can be a replacement to a SQL database.
 
