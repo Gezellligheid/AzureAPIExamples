@@ -101,6 +101,18 @@ Created by Debaveye Elias
 		Azure POST function that will create an instance of ExampleRequest and put this in a Table storage.<br />
 		This can be a replacement to a SQL database.
 
-		**Note:** Don't forget to add your ConnectionString for you Storage Acoount in local.setting.json<br />
+		**Note:** Don't forget to add your ConnectionString for you Storage Acoount in local.settings.json<br />
+		Don't forget to write your Tablename correctly<br />
+		Don't forget to add the Microsoft.Azure.Cosmos.Table package<br />
+		[package](https://www.nuget.org/packages/Microsoft.Azure.Cosmos.Table/1.0.8?_src=template)
+
+
+	* `FunctionName("GETWithAzureStorage")`
+
+		Azure GET function that will get all rows or certain rows with a specific value in a specific column. <br />
+		Be mindfull of parameters and change them accordingly!
+
+		**Note:** Don't forget yo add your ConnectionString for your Storage Account in local.settings.json<br />
+		Don't forget to write your Tablename correctly<br />
 		Don't forget to add the Microsoft.Azure.Cosmos.Table package<br />
 		[package](https://www.nuget.org/packages/Microsoft.Azure.Cosmos.Table/1.0.8?_src=template)
