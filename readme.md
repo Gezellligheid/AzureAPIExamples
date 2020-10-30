@@ -130,4 +130,47 @@ Created by Debaveye Elias
 		**Note:** Don't forget to add the ConnectionString to local.settings.json<br/>
 		Don't forget to add the Azure.Storage.Queues package<br/>
 		[package](https://www.nuget.org/packages/Azure.Storage.Queues/12.4.2?_src=template)
-		
+
+
+5. **IoTHub**
+
+	4.1 **Listen to messages** `IoTHub/IoTHubListener.cs`
+
+	* `FunctionName("IoTHubListener")`
+
+		Listens to all messages to the IoTHub
+
+		**Note:** Don't forget to add you ConnectionString from **YourIoTHub > Built-in endpoints > Event Hub compatible endpoint**
+
+
+	4.2 **Twins** `IoTHub/IoTHubTwinEdits.cs`
+
+	* `FunctionName("GetDevices")`
+
+		Will get all Twins from devices registered in the IoTHub
+
+		**Note:** Requires the AdminConnectionString **YourIoTHub > Shared access policies > iothubowner**<br/>
+		Don't  forget to install the Microsoft.Azure.Devices package<br/>
+		[package](https://www.nuget.org/packages/Microsoft.Azure.Devices/1.28.0-preview-001)
+
+	* `FunctionName("changeValue")`
+
+		Will change a value you specified in a twin of a device you specified via a GET trigger
+
+		**Note:** Requires the AdminConnectionString **YourIoTHub > Shared access policies > iothubowner**<br/>
+		Don't  forget to install the Microsoft.Azure.Devices package<br/>
+		[package](https://www.nuget.org/packages/Microsoft.Azure.Devices/1.28.0-preview-001)
+
+
+	4.3 **Device** `IoTHub/IoTHubPython.py`
+
+	* `FunctionName("GetDevices")`
+
+		Will simulate a Device connected to the IoTHub<br/>
+		- Sends data to the IotHub<br/>
+		- Gets data from Device Twin (threshold)<br/>
+		- Triggers event when new Twin is available
+
+		**Note:** Requires the DeviceConnectionString **YourIoTHub > Iot Devices > YourDevice > Primary Connection String**<br/>
+		Don't  forget to install the Microsoft.Azure.Devices package<br/>
+		[package](https://www.nuget.org/packages/Microsoft.Azure.Devices/1.28.0-preview-001)
