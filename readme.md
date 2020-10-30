@@ -172,5 +172,5 @@ Created by Debaveye Elias
 		- Triggers event when new Twin is available
 
 		**Note:** Requires the DeviceConnectionString **YourIoTHub > Iot Devices > YourDevice > Primary Connection String**<br/>
-		Don't  forget to install the Microsoft.Azure.Devices package<br/>
-		[package](https://www.nuget.org/packages/Microsoft.Azure.Devices/1.28.0-preview-001)
+		Don't  forget to run `pip install azure-iot-device`<br/>
+	
