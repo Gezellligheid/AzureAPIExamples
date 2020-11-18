@@ -162,7 +162,7 @@ Created by Debaveye Elias
 		[package](https://www.nuget.org/packages/Microsoft.Azure.Devices/1.28.0-preview-001)
 
 
-	4.2 **Messages** `IoTHub/IoTSending.cs`
+	4.3 **Messages** `IoTHub/IoTSending.cs`
 
 	* `FunctionName("IoTSending")`
 
