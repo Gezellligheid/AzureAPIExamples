@@ -162,7 +162,18 @@ Created by Debaveye Elias
 		[package](https://www.nuget.org/packages/Microsoft.Azure.Devices/1.28.0-preview-001)
 
 
-	4.3 **Device** `IoTHub/IoTHubPython.py`
+	4.2 **Messages** `IoTHub/IoTSending.cs`
+
+	* `FunctionName("IoTSending")`
+
+		Will send messages OR send direct method to the device in the query params
+
+		**Note:** Requires the AdminConnectionString **YourIoTHub > Shared access policies > iothubowner**<br/>
+		Don't  forget to install the Microsoft.Azure.Devices package<br/>
+		[package](https://www.nuget.org/packages/Microsoft.Azure.Devices/1.28.0-preview-001)
+
+
+	4.4 **Device** `IoTHub/IoTHubPython.py`
 
 	* `FunctionName("GetDevices")`
 
