@@ -11,5 +11,6 @@ namespace FunctionsExamples
         public string address { get; set; }
         public int age { get; set; }
 
+        public string id { get; set; }
     }
 }

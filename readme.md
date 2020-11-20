@@ -134,7 +134,7 @@ Created by Debaveye Elias
 
 5. **IoTHub**
 
-	4.1 **Listen to messages** `IoTHub/IoTHubListener.cs`
+	5.1 **Listen to messages** `IoTHub/IoTHubListener.cs`
 
 	* `FunctionName("IoTHubListener")`
 
@@ -143,7 +143,7 @@ Created by Debaveye Elias
 		**Note:** Don't forget to add you ConnectionString from **YourIoTHub > Built-in endpoints > Event Hub compatible endpoint**
 
 
-	4.2 **Twins** `IoTHub/IoTHubTwinEdits.cs`
+	5.2 **Twins** `IoTHub/IoTHubTwinEdits.cs`
 
 	* `FunctionName("GetDevices")`
 
@@ -162,7 +162,7 @@ Created by Debaveye Elias
 		[package](https://www.nuget.org/packages/Microsoft.Azure.Devices/1.28.0-preview-001)
 
 
-	4.3 **Messages** `IoTHub/IoTSending.cs`
+	5.3 **Messages** `IoTHub/IoTSending.cs`
 
 	* `FunctionName("IoTSending")`
 
@@ -173,7 +173,7 @@ Created by Debaveye Elias
 		[package](https://www.nuget.org/packages/Microsoft.Azure.Devices/1.28.0-preview-001)
 
 
-	4.4 **Device** `IoTHub/IoTHubPython.py`
+	5.4 **Device** `IoTHub/IoTHubPython.py`
 
 	* `FunctionName("GetDevices")`
 
@@ -185,3 +185,16 @@ Created by Debaveye Elias
 		**Note:** Requires the DeviceConnectionString **YourIoTHub > Iot Devices > YourDevice > Primary Connection String**<br/>
 		Don't forget to install `pip install azure-iot-device`<br/>
 	
+
+6. **CosmosDb**
+
+	6.1 **Add item to the database** `COSMOS/CosmosFunctions.cs`
+
+	* `FunctionName("AddItemToCosmos")`
+
+		Adds new item to a specific comsos database in a specific container
+
+		**Note:** Don't forget to add you ConnectionString from **YourCosmosDatabase > Keys > Primary ConnectionString**<br/>
+		Don't forget to install the Microsoft.Azure.Cosmos package<br/>
+		[package](https://www.nuget.org/packages/Microsoft.Azure.Cosmos/3.15.0?_src=template)
+

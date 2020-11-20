@@ -44,6 +44,7 @@ namespace FunctionsExamples.IoTHub
                 foreach (var twin in page)
                 {
                     twins.Add(twin);
+                    // possebilitty to change every twin of every device
                 }
             }
 
