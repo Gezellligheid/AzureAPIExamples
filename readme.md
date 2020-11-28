@@ -185,7 +185,7 @@ Created by Debaveye Elias
 		**Note:** Requires the DeviceConnectionString **YourIoTHub > Iot Devices > YourDevice > Primary Connection String**<br/>
 		Don't forget to install `pip install azure-iot-device`<br/>
 	
-
+		
 6. **CosmosDb**
 
 	6.1 **Add item to the database** `COSMOS/CosmosFunctions.cs`
@@ -193,6 +193,17 @@ Created by Debaveye Elias
 	* `FunctionName("AddItemToCosmos")`
 
 		Adds new item to a specific comsos database in a specific container
+
+		**Note:** Don't forget to add you ConnectionString from **YourCosmosDatabase > Keys > Primary ConnectionString**<br/>
+		Don't forget to install the Microsoft.Azure.Cosmos package<br/>
+		[package](https://www.nuget.org/packages/Microsoft.Azure.Cosmos/3.15.0?_src=template)
+
+
+	6.2 **Query items from the database** `COSMOS/CosmosFunctions.cs`
+
+	* `FunctionName("QueryItemsCosmos")`
+
+		Queries items fron CosmosDB
 
 		**Note:** Don't forget to add you ConnectionString from **YourCosmosDatabase > Keys > Primary ConnectionString**<br/>
 		Don't forget to install the Microsoft.Azure.Cosmos package<br/>

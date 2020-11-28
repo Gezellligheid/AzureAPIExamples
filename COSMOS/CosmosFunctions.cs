@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,5 +53,52 @@ namespace FunctionsExamples.COSMOS
 
             return new OkObjectResult("");
         }
+
+
+
+
+
+        /*
+         *
+         *
+         *  Query items in CosmosDb
+         *
+         *  Do not forget your connectionstring in local.settings.json
+         *  Do not forget to install Microsoft.Azure.Cosmos as a NuGet package
+         *
+         */
+        [FunctionName("QueryItemsCosmos")]
+        public static async Task<IActionResult> Run2(
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "{deviceid}")] HttpRequest req,string deviceid,
+            ILogger log)
+        {
+
+            CosmosClientOptions options = new CosmosClientOptions();
+            options.ConnectionMode = ConnectionMode.Gateway;
+
+            //connect to database
+            CosmosClient client = new CosmosClient(Environment.GetEnvironmentVariable("cosmos"), options);
+            //get container
+            Container container = client.GetContainer("vendingmachines", "machines");
+
+            //Creating query
+            QueryDefinition query = new QueryDefinition("select * from machines m where m.deviceid = @deviceid").WithParameter("@deviceid", deviceid);
+
+            //Creating list to put items in that will be returned
+            List<ExampleRequest> items = new List<ExampleRequest>();
+            using (FeedIterator<ExampleRequest> resultSet = container.GetItemQueryIterator<ExampleRequest>(
+                queryDefinition: query))
+            {
+                while (resultSet.HasMoreResults)
+                {
+                    //Get the items and put them in the list
+                    FeedResponse<ExampleRequest> response = await resultSet.ReadNextAsync();
+                    items.AddRange(response);
+                }
+            }
+            //return the list
+            return new OkObjectResult(items);
+        }
+
     }
 }
