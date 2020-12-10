@@ -1,6 +1,10 @@
 ﻿# Azure Functions Examples
 Created by Debaveye Elias
 
+
+0. **Python Fetches** `PythonFetch.py`
+
+
 1. **GET** `GET/GET.cs`
 
 	* `FunctionName("GET_NoParams")`
