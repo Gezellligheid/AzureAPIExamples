@@ -1,4 +1,4 @@
-# Azure Functions Examples
+﻿# Azure Functions Examples
 Created by Debaveye Elias
 
 1. **GET** `GET/GET.cs`
@@ -78,7 +78,7 @@ Created by Debaveye Elias
 		The data can be used for all sorts of end results (Database, ...)(see variablenames)
 
 		**Note:** Don't forget to add the CaseOnline.Azure.WebJobs.Extensions.Mqtt package<br />
-		[package](https://www.nuget.org/packages/CaseOnline.Azure.WebJobs.Extensions.Mqtt/2.1.0?_src=template) **VERSION 1.2.0**
+		[package](https://www.nuget.org/packages/CaseOnline.Azure.WebJobs.Extensions.Mqtt/2.1.0?_src=template) ❗❗**VERSION 1.2.0**❗❗
 
 
 	* `FunctionName("MQTTFunctionsWithoutResend")`
@@ -89,7 +89,7 @@ Created by Debaveye Elias
 		The data can be used for all sorts of end results (Database, ...)(see variablenames)
 
 		**Note:** Don't forget to add the CaseOnline.Azure.WebJobs.Extensions.Mqtt package<br />
-		[package](https://www.nuget.org/packages/CaseOnline.Azure.WebJobs.Extensions.Mqtt/2.1.0?_src=template) **VERSION 1.2.0*
+		[package](https://www.nuget.org/packages/CaseOnline.Azure.WebJobs.Extensions.Mqtt/2.1.0?_src=template) ❗❗**VERSION 1.2.0**❗❗
 
 
 4. **Azure Storage**
