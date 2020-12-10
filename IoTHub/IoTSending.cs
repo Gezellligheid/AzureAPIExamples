@@ -38,19 +38,23 @@ namespace FunctionsExamples.IoTHub
             // SEND MESSAGE
             //
 
-            //Replace "Payload" with the message that has to be sent
-            Message message = new Message(Encoding.ASCII.GetBytes("Payload"));
+            // Getting body from POST request
+            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+
+            // sending contents of body to device
+            Message message = new Message(Encoding.ASCII.GetBytes(requestBody));
             await client.SendAsync(deviceid, message);
 
 
             //
-            // Send direct method
+            // SEND DIRECT METHOD
             //
 
             //Change to method name
             CloudToDeviceMethod method = new CloudToDeviceMethod("reboot");
             //Include payload if needed
             method.SetPayloadJson("{'seconds':15}");
+            //Invoke the method
             await client.InvokeDeviceMethodAsync(deviceid, method);
 
 

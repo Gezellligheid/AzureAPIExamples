@@ -11,10 +11,6 @@ namespace FunctionsExamples.IoTHub
 {
     public static class IoTHubListener
     {
-        private static HttpClient client = new HttpClient();
-
-
-
         /*
          *
          * IotHub Trigger that will fire whenever a message is sent to the hub

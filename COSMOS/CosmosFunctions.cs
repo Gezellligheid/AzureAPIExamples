@@ -26,7 +26,7 @@ namespace FunctionsExamples.COSMOS
          *
          */
         [FunctionName("AddItemToCosmos")]
-        public static async Task<IActionResult> Run(
+        public static async Task<IActionResult> AddItemToCosmos(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
             ILogger log)
         {
@@ -68,7 +68,7 @@ namespace FunctionsExamples.COSMOS
          *
          */
         [FunctionName("QueryItemsCosmos")]
-        public static async Task<IActionResult> Run2(
+        public static async Task<IActionResult> QueryItemsCosmos(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "{deviceid}")] HttpRequest req,string deviceid,
             ILogger log)
         {
