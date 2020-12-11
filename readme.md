@@ -54,6 +54,10 @@ Created by Debaveye Elias
 		**Note:**
 		Don't forget to add your ConnectionString to your local.settings.json and include it in the code. (see comments)
 
+		**Note:** Don't forget to add you ConnectionString from **YourCosmosDatabase > Keys > Primary ConnectionString**<br/>
+		Don't forget to install the System.Data.SqlClient package<br/>
+		[package](https://www.nuget.org/packages/System.Data.SqlClient/4.8.2?_src=template)
+
 
 3. **MQTT**
 
