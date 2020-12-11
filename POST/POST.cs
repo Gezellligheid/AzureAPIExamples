@@ -71,9 +71,9 @@ namespace FunctionsExamples
             */
 
             //Database shit
-            string connection = Environment.GetEnvironmentVariable("CHANGE_ME");
+            string connectionString = Environment.GetEnvironmentVariable("CHANGE_ME");
 
-            using (SqlConnection sqlConnection = new SqlConnection(connection))
+            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
             {
 
                 await sqlConnection.OpenAsync();
@@ -84,6 +84,7 @@ namespace FunctionsExamples
                     //Your SQL query
                     command.CommandText = $"INSERT INTO Bezoekers Values (@Name, @Address, @Age)";
 
+                    // Add parameters
                     command.Parameters.AddWithValue("@Name", exampleRequest.name);
                     command.Parameters.AddWithValue("@Address", exampleRequest.address);
                     command.Parameters.AddWithValue("@Age", exampleRequest.age);

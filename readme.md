@@ -1,6 +1,10 @@
 ﻿# Azure Functions Examples
 Created by Debaveye Elias
 
+
+0. **Python Fetches** `PythonFetch.py`
+
+
 1. **GET** `GET/GET.cs`
 
 	* `FunctionName("GET_NoParams")`
@@ -61,7 +65,7 @@ Created by Debaveye Elias
 
 3. **MQTT**
 
-	3.1 **MQTT Without Azure Functions** `MQTT/MQTTNoFunctions.cs`
+	3.1 **MQTT Without Azure Functions** `MQTT/MQTTNoFunctions.cs` `MQTT/MQTT01.py`
 		
 	* `Example on adding MQTT`
 
@@ -70,7 +74,15 @@ Created by Debaveye Elias
 
 		**Note:** Don't forget to add the M2MQTT NuGet package<br />
 		[Package](https://www.nuget.org/packages/M2Mqtt/4.3.0?_src=template)
+		
+		
+	* `Example on adding MQTT in PYTHON`
 
+		Example on how you would implement MQTT in a Python project<br />
+		Covers **sending** and **receiving** messages
+
+		**Note:** Don't forget to add the pip package<br />
+		`pip install paho-mqtt`
 
 	3.2 **MQTT With Azure Functions** `MQTT/MQTTFunctions.cs`
 
@@ -166,7 +178,7 @@ Created by Debaveye Elias
 		[package](https://www.nuget.org/packages/Microsoft.Azure.Devices/1.28.0-preview-001)
 
 
-	5.3 **Messages** `IoTHub/IoTSending.cs`
+	5.3 **Direct methods and messaging to device** `IoTHub/IoTSending.cs`
 
 	* `FunctionName("IoTSending")`
 

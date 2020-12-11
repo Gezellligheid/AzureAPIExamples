@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 
 namespace FunctionsExamples
 {
-    class CloudTables
+    public class CloudTables
     {
 
 
@@ -37,31 +37,32 @@ namespace FunctionsExamples
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             ExampleRequest exampleRequest = JsonConvert.DeserializeObject<ExampleRequest>(requestBody);
 
-            //Converting ExampleRequest to ExampleRequestEntity
+            //Converting ExampleRequest to ExampleRequestEntity for use in Azure Table Storage
             ExampleRequestEntity exampleRequesEntity = new ExampleRequestEntity()
             {
-
                 name = exampleRequest.name,
                 address = exampleRequest.address,
                 age = exampleRequest.age
-
             };
 
 
             /*
             *
-            * Dont forget to add your ConnectionString to local.settings.json and changee the name under here
+            * Dont forget to add your ConnectionString to local.settings.json and change the name under here
             * Can be found in the Azure portal
             *
             */
-            string connenction = Environment.GetEnvironmentVariable("CHANGE_ME");
+            string connectionString = Environment.GetEnvironmentVariable("CHANGE_ME");
 
             //Azure Table storage shit
-            CloudStorageAccount cloudStorageAccount = CloudStorageAccount.Parse(connenction);
+            CloudStorageAccount cloudStorageAccount = CloudStorageAccount.Parse(connectionString);
             CloudTableClient cloudTableClient = cloudStorageAccount.CreateCloudTableClient();
             CloudTable cloudTable = cloudTableClient.GetTableReference("registrations");
-            await cloudTable.CreateIfNotExistsAsync(); // Creates table if not exists
+            // Creates table if not exists
+            await cloudTable.CreateIfNotExistsAsync(); 
+            // insert entity into table
             TableOperation insertOperation = TableOperation.Insert(exampleRequesEntity);
+            // execute insert operation
             await cloudTable.ExecuteAsync(insertOperation);
 
             return new OkObjectResult(exampleRequesEntity);

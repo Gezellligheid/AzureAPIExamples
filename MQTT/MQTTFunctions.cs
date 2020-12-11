@@ -29,7 +29,9 @@ namespace FunctionsExamples
         {
             //getting the message that has been sent   
             var body = message.GetMessage();
-            var bodyMessageg = Encoding.UTF8.GetString(body);
+            string bodyMessage = Encoding.UTF8.GetString(body);
+
+            log.LogInformation($"MQTTFunctionsWithResend: {bodyMessage}");
 
             //sending back a message to a topic
             var newMessage = $"{message} from server";
@@ -56,9 +58,9 @@ namespace FunctionsExamples
         {
             //getting the message that has been sent   
             var body = message.GetMessage();
-            var bodyMessageg = Encoding.UTF8.GetString(body);
-            
+            string bodyMessage = Encoding.UTF8.GetString(body);
 
+            log.LogInformation($"MQTTFunctionsNoResend: {bodyMessage}");
             /*
              *
              * Do stuff with the message

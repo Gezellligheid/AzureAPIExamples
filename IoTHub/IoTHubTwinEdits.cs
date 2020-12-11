@@ -27,11 +27,11 @@ namespace FunctionsExamples.IoTHub
          *
          */
         [FunctionName("GetDevices")]
-        public static async Task<IActionResult> Run(
+        public static async Task<IActionResult> GetDevices(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "devices")] HttpRequest req,
             ILogger log)
         {
-;
+
             //Create manager
             RegistryManager manager = RegistryManager.CreateFromConnectionString(Environment.GetEnvironmentVariable("IoTAdmin"));
             //Search query
@@ -44,7 +44,7 @@ namespace FunctionsExamples.IoTHub
                 foreach (var twin in page)
                 {
                     twins.Add(twin);
-                    // possebilitty to change every twin of every device
+                    // possibility to change every twin of every device
                 }
             }
 
@@ -61,7 +61,7 @@ namespace FunctionsExamples.IoTHub
         *
         */
         [FunctionName("changeValue")]
-        public static async Task<IActionResult> GetDevices(
+        public static async Task<IActionResult> ChangeValue(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "devices/{id}/{value}")] HttpRequest req,string id, int value,
             ILogger log)
         {
