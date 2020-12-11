@@ -10,8 +10,8 @@ def on_message(client, userdata,msg):
     else:
         print ('Goodbye World')
 
-def send_message:
-    data = { "key": value, "key2", value2 }
+def send_message():
+    data = { "key": value, "key2": value2 }
     client.publish("/topic", str(data))
 
 
