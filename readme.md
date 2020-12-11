@@ -56,9 +56,9 @@ Created by Debaveye Elias
 		Route can be changed however you want
 		
 		**Note:**
-		Don't forget to add your ConnectionString to your local.settings.json and include it in the code. (see comments)
+		Don't forget to add your ConnectionString to your local.settings.json and include it in the code. (see comments)<br/>
 
-		**Note:** Don't forget to add you ConnectionString from **YourCosmosDatabase > Keys > Primary ConnectionString**<br/>
+		**Note:** Don't forget to add your sql NuGet package<br/>
 		Don't forget to install the System.Data.SqlClient package<br/>
 		[package](https://www.nuget.org/packages/System.Data.SqlClient/4.8.2?_src=template)
 
